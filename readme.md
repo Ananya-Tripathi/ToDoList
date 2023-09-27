@@ -28,13 +28,13 @@ Follow these steps to get the project up and running on your system:
 
 2. Navigate to the backend directory and create a .env file with the following content, replacing the values with your own:
 
-
-MONGO_URI=Your MongoDB URI
-GMAIL_USERNAME=your gmail address 
-GMAIL_PASSWORD=password created inside the 'App Password' section under the Google Accounts setting
-PORT=8000
-JWT_SECRET=a random secret key eg. thisisasecretkey
-
+```
+   MONGO_URI=Your MongoDB URI
+   GMAIL_USERNAME=your gmail address 
+   GMAIL_PASSWORD=password created inside the 'App Password' section under the Google Accounts setting
+   PORT=8000
+   JWT_SECRET=a random secret key eg. thisisasecretkey
+```
 
 Setting Up MongoDB Database
 To set up a MongoDB database for this project, follow these steps:
@@ -44,26 +44,25 @@ Sign in to your MongoDB account or create a new one on the MongoDB Atlas website
 Create a new cluster and configure it according to your needs. Make note of the MongoDB connection URI provided by MongoDB Atlas.
 
 Open the .env file in the backend directory and replace the MONGO_URI value with the MongoDB connection URI from step 2.
-
+```
 MONGO_URI='your-mongodb-connection-uri'
+```
 Save the .env file.
 
 3. Install backend dependencies and start the server:
 
+```
+cd backend
+npm install
+nodemon server
+```
 
-cd competishun-todo-assignment/backend
+4. Open a new terminal window, navigate to the frontend directory, and install frontend dependencies and start React app:
+```
+cd frontend
 npm install
 npm start
-
-
-4. Open a new terminal window, navigate to the frontend directory, and install frontend dependencies:
-
-cd ../frontend
-npm install
-
-5. Start the React app:
-npm start```
-
+```
 Usage
 Once the application is running, you can create, update, and delete tasks using the user-friendly interface.
 Users can sign up and log in to manage their tasks.
