@@ -28,12 +28,12 @@ function Register() {
     <div>
       {userToken && <Navigate to="/" />}
       <section className="register-container">
-        <div className="container px-6 py-12 h-full">
+        <div className="container px-10 py-12 h-full">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
             <div className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
               <img src={list} className="w-3/4 ml-7" alt="Sample" />
             </div>
-            <div className="w-[400px] ">
+            <div className="w-[400px] mt-[-40px]">
               <form method="post" onSubmit={handleSubmit}>
                 <div>
                   {error && (
