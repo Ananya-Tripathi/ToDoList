@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, Navigate } from "react-router-dom";
 import axios from "../Axios/axios.js";
 import TokenContext from "../context/TokenContext.js";
+import list from "../assests/list.png";
 function Login() {
   const [formData, setFormData] = useState({});
   const { userToken, tokenDispatch, userDispatch } = useContext(TokenContext);
@@ -31,13 +32,16 @@ function Login() {
           <div className="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6">
             <div className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
               <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-                className="w-full"
+                src={list}
+                className="w-3/5 mx-auto"
                 alt="Sample"
               />
             </div>
-            <div className="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+            <div className="xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
               <form method="post" onSubmit={handleSubmit}>
+                <p className="text-[#0e172c] text-xl mb-2 text-center font-bold">
+                  Login
+                </p>
                 <div>
                   {error && (
                     <div className="text-center border-2 border-green-600 p-2 mb-2 rounded-md bg-red-200 shadow-2xl">

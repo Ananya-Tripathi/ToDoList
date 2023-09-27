@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { Navigate } from "react-router-dom";
 import axios from "../Axios/axios.js";
 import TokenContext from "../context/TokenContext.js";
+import list from "../assests/list.png";
 function Register() {
   const [formData, setFormData] = useState({});
   const { userToken, tokenDispatch, userDispatch } = useContext(TokenContext);
@@ -29,22 +30,19 @@ function Register() {
       <section className="register-container">
         <div className="container px-6 py-12 h-full">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
-            <div className="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-                className="w-full"
-                alt="Phone"
-              />
+            <div className="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0">
+              <img src={list} className="w-3/4 ml-7" alt="Sample" />
             </div>
-            <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
+            <div className="w-[400px] ">
               <form method="post" onSubmit={handleSubmit}>
                 <div>
                   {error && (
-                    <div className="text-center border-2 border-green-600 p-2 mb-2 rounded-md bg-red-200 shadow-2xl">
+                    <div className="text-center border-2 border-[#0e172c] p-2 mb-2 rounded-md bg-red-200 shadow-2xl">
                       {error.message}
                     </div>
                   )}
                 </div>
+                <p className="text-[#0e172c] text-xl mb-2 text-center font-bold">Register Here</p>
                 <div className="mb-6">
                   <input
                     type="text"
